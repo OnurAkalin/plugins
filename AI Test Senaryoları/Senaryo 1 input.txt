@@ -1,0 +1,25 @@
+Elimde bir rest servis var. Burada çok fazla hatalı istek alıyorum. Sana json formatındaki request yapısını ve servisime ait teknik dökümanı iletiyorum ve bana detaylı test senaryoları üretmeni istiyorum. Bu senaryolar için kısa açıklamalar ile birlikte doldurulmuş request bilgisine ihtiyacım var. Olabildiğince fazla senaryo üret teknik dökümana göre her durumu değerlendir.
+
+Teknik döküman içeriğim:
+
+ad: Müşteri adının tutulduğu alandır. Boş veya null olmamalıdır. Rakam bulunduramaz. " ve ? karakterlerini alamaz.
+ikinciAd: Müşteri ikinci adının tutulduğu alandır. Boş veya null olarak gönderilebilir. Eğer değer gönderildiyse değerde rakam olmamalıdır. " ve ? karakterleri alamaz.
+soyad: Müşteri soyadının tutulduğu alandır. Boş veya null olmamalıdır. Rakam bulunduramaz. " ve ? karakterlerini alamaz.
+varlikTuru: Gerçek kişi ise "G", Tüzel kişi ise "T" değerleri alabilir. Bunun dışındaki hiçbir karakteri alamaz.
+tckn: varlikTuru alanı "G" ise boş veya null olmamalıdır. 11 karakter uzunluğunda olmalıdır. Sadece rakamlardan oluşabilir. varlikTuru alanı "T" ise boş veya null olmalıdır.
+vkn: varlikTuru alanı "T" ise boş veya null olmamalıdır. 10 karakter uzunluğunda olmalıdır. Sadece rakamlardan oluşabilir. varlikTuru alanı "G" ise boş veya null olmalıdır.
+tutar: Ödeme tutarının tutulduğu alandır. Sadece pozitif tam sayı değer alabilir. Başka değer alamaz.
+urunId: Müşterinin ödeme yaptığı ürünün id değeridir. Sadece pozitif tam sayı değer alabilir. Başka değer alamaz.
+
+Request yapım:
+
+{
+  "ad": "string",
+  "ikinciAd": "string",
+  "soyad": "string",
+  "varlikTuru": "string",
+  "tckn": "integer",
+  "vkn": "integer",
+  "tutar": "integer",
+  "urunId": "integer"
+}

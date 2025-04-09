@@ -1,0 +1,20 @@
+Elimde rest bir servis var. Request ve response yapısı aşağıdaki gibi.
+
+Request
+{
+  "kimlikNo": "string"
+}
+
+Response
+
+{
+  "bireyselKrediler": [
+    {
+      "kurumKodu": "string",
+      "kurumAdi": "string",
+      "tutar": "integer"
+    }
+  ]
+}
+
+Bu servis request headerdaki "kurumKodu" alanına göre kurumAdi alanını *** şeklinde maskeliyor. Headerdaki kurumKodu ile response üzerindeki kurumKodu aynı ise kurum adı maskelenmeden gösteriliyor. Ayrıca request headerdaki kurumKodu "9999" ise yine maskelenmeden bu alan açık bir şekilde gösteriliyor. Headerdaki kurumKodu alanı 4 haneli rakamdan oluşup string olarak tutulmaktadır. Bana bu bilgiler doğrultusunda detaylı test senaryoları üretir misin. Olası tüm durumları kapsasın. Request, response ve kısa açıklamalarla cevabını bekliyorum.
